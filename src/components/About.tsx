@@ -79,14 +79,9 @@ export default function About() {
                 key={value.title}
                 whileHover={{y: -8}}
                 transition={{duration: 0.3}}
-                className="bg-white pt-10 pb-8 px-8 border border-gray-100 shadow-sm hover:shadow-xl relative group flex flex-col overflow-hidden transition-shadow duration-300"
+                className="bg-white p-8 border border-gray-100 shadow-sm hover:shadow-xl relative group flex flex-col overflow-hidden transition-shadow duration-300"
                 id={`value-card-${idx}`}
               >
-                {/* Watermark index — one of the three details that carry this card */}
-                <span className="absolute -top-3 right-4 text-7xl font-display font-bold text-gray-100 group-hover:text-blue-50 transition-colors duration-300 select-none pointer-events-none">
-                  {String(idx + 1).padStart(2, '0')}
-                </span>
-
                 {/* Square icon tile that inverts on hover */}
                 <div className="relative w-16 h-16 bg-blue-50 flex items-center justify-center mb-8 group-hover:bg-blue-600 transition-colors duration-300 shrink-0">
                   {iconMap[idx % iconMap.length]}
