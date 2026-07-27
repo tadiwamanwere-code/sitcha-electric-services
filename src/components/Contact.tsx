@@ -80,19 +80,20 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-blue-600 text-white overflow-hidden relative">
+    <section id="contact" className="py-24 md:py-32 bg-white text-gray-900 overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="max-w-2xl mb-16 md:mb-20">
           <div className="flex items-center gap-2 mb-4">
-            <span className="h-[1px] w-6 bg-yellow-500" />
-            <span className="text-xs font-mono tracking-[0.25em] text-yellow-500 uppercase font-semibold">
+            {/* Blue, not the amber accent: amber on white fails contrast. */}
+            <span className="h-[1px] w-6 bg-blue-600" />
+            <span className="text-xs font-mono tracking-[0.25em] text-blue-600 uppercase font-semibold">
               {SECTIONS.contact.eyebrow}
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold tracking-tight text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold tracking-tight text-gray-900">
             {SECTIONS.contact.heading}
           </h2>
-          <p className="text-sm sm:text-base font-sans text-gray-300 font-light mt-4">
+          <p className="text-sm sm:text-base font-sans text-gray-600 font-light mt-4">
             {SECTIONS.contact.intro}
           </p>
         </div>
@@ -105,25 +106,25 @@ export default function Contact() {
           <div className="lg:col-span-5 space-y-4">
             <a
               href={`tel:${CONTACT_INFO.phone}`}
-              className="flex items-start gap-4 bg-white/5 hover:bg-white/10 border border-white/10 p-5 transition-colors group"
+              className="flex items-start gap-4 bg-gray-50 hover:bg-gray-100 border border-gray-200 p-5 transition-colors group"
             >
               <div className="w-11 h-11 bg-blue-700 flex items-center justify-center shrink-0 group-hover:bg-yellow-500 transition-colors">
                 <Phone className="w-5 h-5 text-yellow-500 group-hover:text-[#101820] transition-colors" />
               </div>
               <div>
-                <span className="text-[10px] font-mono text-gray-400 tracking-wider uppercase block mb-1">
+                <span className="text-[10px] font-mono text-gray-500 tracking-wider uppercase block mb-1">
                   Call Us
                 </span>
-                <span className="text-base font-sans text-white font-medium block">
+                <span className="text-base font-sans text-gray-900 font-medium block">
                   {CONTACT_INFO.phoneFormatted}
                 </span>
                 {CONTACT_INFO.phone2Formatted && (
-                  <span className="text-sm font-sans text-gray-300 block">
+                  <span className="text-sm font-sans text-gray-600 block">
                     {CONTACT_INFO.phone2Formatted}
                   </span>
                 )}
                 {CONTACT_INFO.phone3Formatted && (
-                  <span className="text-sm font-sans text-gray-300 block">
+                  <span className="text-sm font-sans text-gray-600 block">
                     {CONTACT_INFO.phone3Formatted}
                   </span>
                 )}
@@ -134,44 +135,44 @@ export default function Contact() {
               href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-start gap-4 bg-white/5 hover:bg-white/10 border border-white/10 p-5 transition-colors group"
+              className="flex items-start gap-4 bg-gray-50 hover:bg-gray-100 border border-gray-200 p-5 transition-colors group"
             >
               <div className="w-11 h-11 bg-blue-700 flex items-center justify-center shrink-0 group-hover:bg-yellow-500 transition-colors">
                 <MessageCircle className="w-5 h-5 text-yellow-500 group-hover:text-[#101820] transition-colors" />
               </div>
               <div>
-                <span className="text-[10px] font-mono text-gray-400 tracking-wider uppercase block mb-1">
+                <span className="text-[10px] font-mono text-gray-500 tracking-wider uppercase block mb-1">
                   WhatsApp
                 </span>
-                <span className="text-base font-sans text-white font-medium block">
+                <span className="text-base font-sans text-gray-900 font-medium block">
                   Chat with us now
                 </span>
               </div>
             </a>
 
-            <div className="flex items-start gap-4 bg-white/5 border border-white/10 p-5">
+            <div className="flex items-start gap-4 bg-gray-50 border border-gray-200 p-5">
               <div className="w-11 h-11 bg-blue-700 flex items-center justify-center shrink-0">
                 <MapPin className="w-5 h-5 text-yellow-500" />
               </div>
               <div>
-                <span className="text-[10px] font-mono text-gray-400 tracking-wider uppercase block mb-1">
+                <span className="text-[10px] font-mono text-gray-500 tracking-wider uppercase block mb-1">
                   Service Area
                 </span>
-                <span className="text-sm font-sans text-gray-200 font-light block">
+                <span className="text-sm font-sans text-gray-700 font-light block">
                   {CONTACT_INFO.serviceArea}
                 </span>
               </div>
             </div>
 
-            <div className="flex items-start gap-4 bg-white/5 border border-white/10 p-5">
+            <div className="flex items-start gap-4 bg-gray-50 border border-gray-200 p-5">
               <div className="w-11 h-11 bg-blue-700 flex items-center justify-center shrink-0">
                 <Clock className="w-5 h-5 text-yellow-500" />
               </div>
               <div>
-                <span className="text-[10px] font-mono text-gray-400 tracking-wider uppercase block mb-1">
+                <span className="text-[10px] font-mono text-gray-500 tracking-wider uppercase block mb-1">
                   Hours
                 </span>
-                <span className="text-sm font-sans text-gray-200 font-light block">
+                <span className="text-sm font-sans text-gray-700 font-light block">
                   {CONTACT_INFO.hours}
                 </span>
               </div>
@@ -179,7 +180,7 @@ export default function Contact() {
           </div>
 
           {/* Quote form */}
-          <div className="lg:col-span-7 bg-blue-700 border border-white/10 p-8 md:p-12 shadow-xl relative">
+          <div className="lg:col-span-7 bg-gray-50 border border-gray-200 p-8 md:p-12 shadow-sm relative">
             <AnimatePresence mode="wait">
               {!isSuccess ? (
                 <motion.form
@@ -197,7 +198,7 @@ export default function Contact() {
                     <div className="space-y-2">
                       <label
                         htmlFor="qf-name"
-                        className="text-xs font-mono tracking-wider text-gray-300 uppercase block"
+                        className="text-xs font-mono tracking-wider text-gray-600 uppercase block"
                       >
                         Full Name *
                       </label>
@@ -208,7 +209,7 @@ export default function Contact() {
                         value={formState.name}
                         onChange={handleInputChange}
                         required
-                        className="w-full bg-white/5 border border-white/15 focus:border-yellow-500 px-4 py-3.5 text-sm font-sans text-white placeholder:text-gray-400 focus:outline-none transition-colors"
+                        className="w-full bg-white border border-gray-300 focus:border-blue-600 px-4 py-3.5 text-sm font-sans text-gray-900 placeholder:text-gray-400 focus:outline-none transition-colors"
                         placeholder="e.g. John Moyo"
                       />
                     </div>
@@ -216,7 +217,7 @@ export default function Contact() {
                     <div className="space-y-2">
                       <label
                         htmlFor="qf-email"
-                        className="text-xs font-mono tracking-wider text-gray-300 uppercase block"
+                        className="text-xs font-mono tracking-wider text-gray-600 uppercase block"
                       >
                         Email Address
                       </label>
@@ -226,7 +227,7 @@ export default function Contact() {
                         name="email"
                         value={formState.email}
                         onChange={handleInputChange}
-                        className="w-full bg-white/5 border border-white/15 focus:border-yellow-500 px-4 py-3.5 text-sm font-sans text-white placeholder:text-gray-400 focus:outline-none transition-colors"
+                        className="w-full bg-white border border-gray-300 focus:border-blue-600 px-4 py-3.5 text-sm font-sans text-gray-900 placeholder:text-gray-400 focus:outline-none transition-colors"
                         placeholder="you@email.com (optional)"
                       />
                     </div>
@@ -236,7 +237,7 @@ export default function Contact() {
                     <div className="space-y-2">
                       <label
                         htmlFor="qf-phone"
-                        className="text-xs font-mono tracking-wider text-gray-300 uppercase block"
+                        className="text-xs font-mono tracking-wider text-gray-600 uppercase block"
                       >
                         Phone Number *
                       </label>
@@ -247,7 +248,7 @@ export default function Contact() {
                         value={formState.phone}
                         onChange={handleInputChange}
                         required
-                        className="w-full bg-white/5 border border-white/15 focus:border-yellow-500 px-4 py-3.5 text-sm font-sans text-white placeholder:text-gray-400 focus:outline-none transition-colors"
+                        className="w-full bg-white border border-gray-300 focus:border-blue-600 px-4 py-3.5 text-sm font-sans text-gray-900 placeholder:text-gray-400 focus:outline-none transition-colors"
                         placeholder="e.g. 077 123 4567"
                       />
                     </div>
@@ -255,7 +256,7 @@ export default function Contact() {
                     <div className="space-y-2">
                       <label
                         htmlFor="qf-type"
-                        className="text-xs font-mono tracking-wider text-gray-300 uppercase block"
+                        className="text-xs font-mono tracking-wider text-gray-600 uppercase block"
                       >
                         Project Type
                       </label>
@@ -266,7 +267,7 @@ export default function Contact() {
                         name="projectType"
                         value={formState.projectType}
                         onChange={handleInputChange}
-                        className="w-full bg-blue-700 border border-white/15 focus:border-yellow-500 px-4 py-3.5 text-sm font-sans text-white focus:outline-none transition-colors cursor-pointer"
+                        className="w-full bg-white border border-gray-300 focus:border-blue-600 px-4 py-3.5 text-sm font-sans text-gray-900 focus:outline-none transition-colors cursor-pointer"
                       >
                         {PROJECT_TYPE_OPTIONS.map((opt) => (
                           <option key={opt.value} value={opt.value}>
@@ -278,7 +279,7 @@ export default function Contact() {
                   </div>
 
                   <div className="space-y-2">
-                    <span className="text-xs font-mono tracking-wider text-gray-300 uppercase block">
+                    <span className="text-xs font-mono tracking-wider text-gray-600 uppercase block">
                       Project Size
                     </span>
                     <div className="grid grid-cols-3 gap-3">
@@ -290,7 +291,7 @@ export default function Contact() {
                           className={`py-3 text-xs font-mono tracking-wider uppercase transition-all duration-300 cursor-pointer border ${
                             formState.budget === range
                               ? 'bg-yellow-500 border-yellow-500 text-[#101820] font-bold'
-                              : 'bg-white/5 border-white/15 hover:border-white/30 text-gray-300 hover:text-white'
+                              : 'bg-white border-gray-300 hover:border-gray-400 text-gray-600 hover:text-gray-900'
                           }`}
                         >
                           {range}
@@ -302,7 +303,7 @@ export default function Contact() {
                   <div className="space-y-2">
                     <label
                       htmlFor="qf-desc"
-                      className="text-xs font-mono tracking-wider text-gray-300 uppercase block"
+                      className="text-xs font-mono tracking-wider text-gray-600 uppercase block"
                     >
                       Tell Us About Your Project *
                     </label>
@@ -313,7 +314,7 @@ export default function Contact() {
                       onChange={handleInputChange}
                       required
                       rows={5}
-                      className="w-full bg-white/5 border border-white/15 focus:border-yellow-500 px-4 py-3.5 text-sm font-sans text-white placeholder:text-gray-400 focus:outline-none transition-colors resize-none"
+                      className="w-full bg-white border border-gray-300 focus:border-blue-600 px-4 py-3.5 text-sm font-sans text-gray-900 placeholder:text-gray-400 focus:outline-none transition-colors resize-none"
                       placeholder="What needs doing, where you are, and anything that's already tripping or failing..."
                     />
                   </div>
@@ -324,7 +325,7 @@ export default function Contact() {
                         initial={{opacity: 0, height: 0}}
                         animate={{opacity: 1, height: 'auto'}}
                         exit={{opacity: 0, height: 0}}
-                        className="p-4 bg-red-950/40 border border-red-500/50 flex items-center gap-3 text-red-300 text-xs font-mono"
+                        className="p-4 bg-red-50 border border-red-300 flex items-center gap-3 text-red-700 text-xs font-mono"
                         role="alert"
                       >
                         <AlertTriangle className="w-4 h-4 shrink-0" />
@@ -336,7 +337,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-4 bg-yellow-500 hover:bg-yellow-400 disabled:bg-gray-600 disabled:text-gray-300 text-[#101820] font-display font-bold text-sm tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+                    className="w-full py-4 bg-yellow-500 hover:bg-yellow-400 disabled:bg-gray-300 disabled:text-gray-500 text-[#101820] font-display font-bold text-sm tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
                     id="submit-quote-btn"
                   >
                     {isSubmitting ? (
@@ -361,25 +362,25 @@ export default function Contact() {
                   className="py-16 text-center space-y-6 flex flex-col items-center"
                   id="contact-success-panel"
                 >
-                  <div className="w-16 h-16 rounded-full bg-yellow-500/15 border border-yellow-500 flex items-center justify-center">
-                    <CheckCircle2 className="w-8 h-8 text-yellow-500" />
+                  <div className="w-16 h-16 rounded-full bg-blue-50 border border-blue-600 flex items-center justify-center">
+                    <CheckCircle2 className="w-8 h-8 text-blue-600" />
                   </div>
                   {/*
                     The deep link only OPENS WhatsApp with the message pre-filled —
                     the visitor still has to press send. Saying "we've got your
                     request" here would be a lie, so the copy tells them to finish.
                   */}
-                  <h3 className="text-2xl font-display font-bold text-white">
+                  <h3 className="text-2xl font-display font-bold text-gray-900">
                     Almost there — press send in WhatsApp.
                   </h3>
-                  <p className="text-sm font-sans text-gray-300 font-light max-w-sm leading-relaxed mx-auto">
+                  <p className="text-sm font-sans text-gray-600 font-light max-w-sm leading-relaxed mx-auto">
                     We&apos;ve opened WhatsApp with your details filled in. Send the message and
                     we&apos;ll come back to you. If it didn&apos;t open, call or WhatsApp us on{' '}
                     {CONTACT_INFO.phoneFormatted}.
                   </p>
                   <button
                     onClick={() => setIsSuccess(false)}
-                    className="px-6 py-2.5 bg-white/5 hover:bg-white/10 text-white border border-white/15 hover:border-yellow-500 hover:text-yellow-500 font-mono text-xs tracking-widest uppercase transition-all duration-300 cursor-pointer"
+                    className="px-6 py-2.5 bg-white hover:bg-gray-50 text-gray-700 border border-gray-300 hover:border-blue-600 hover:text-blue-600 font-mono text-xs tracking-widest uppercase transition-all duration-300 cursor-pointer"
                   >
                     SEND ANOTHER REQUEST
                   </button>

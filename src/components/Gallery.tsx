@@ -19,21 +19,20 @@ export default function Gallery() {
   }, []);
 
   return (
-    /* Panel navy — one step lighter than Services so two dark sections in a row
-       still read as separate chapters. */
-    <section id="gallery" className="py-24 md:py-32 bg-blue-700 text-white overflow-hidden relative">
+    <section id="gallery" className="py-24 md:py-32 bg-white text-gray-900 overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="max-w-2xl mb-16">
           <div className="flex items-center gap-2 mb-4">
-            <span className="h-[1px] w-6 bg-yellow-500" />
-            <span className="text-xs font-mono tracking-[0.25em] text-yellow-500 uppercase font-semibold">
+            {/* Blue, not the amber accent: amber on white fails contrast. */}
+            <span className="h-[1px] w-6 bg-blue-600" />
+            <span className="text-xs font-mono tracking-[0.25em] text-blue-600 uppercase font-semibold">
               {SECTIONS.gallery.eyebrow}
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold tracking-tight text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold tracking-tight text-gray-900">
             {SECTIONS.gallery.heading}
           </h2>
-          <p className="text-sm sm:text-base font-sans text-gray-300 font-light mt-4">
+          <p className="text-sm sm:text-base font-sans text-gray-600 font-light mt-4">
             {SECTIONS.gallery.intro}
           </p>
         </div>
@@ -43,7 +42,7 @@ export default function Gallery() {
             <button
               key={img.src}
               onClick={() => setSelected(idx)}
-              className="relative aspect-square overflow-hidden group cursor-pointer border border-white/10"
+              className="relative aspect-square overflow-hidden group cursor-pointer border border-gray-200"
               id={`gallery-thumb-${idx}`}
               aria-label={`View larger: ${img.alt}`}
             >
@@ -54,7 +53,7 @@ export default function Gallery() {
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-blue-800/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <div className="absolute inset-0 bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <Maximize2 className="w-5 h-5 text-white" />
               </div>
             </button>

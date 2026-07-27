@@ -55,7 +55,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="bg-[#F4F7FA] min-h-screen text-gray-900 font-sans selection:bg-orange-500 selection:text-white antialiased">
+    <div className="bg-white min-h-screen text-gray-900 font-sans selection:bg-orange-500 selection:text-white antialiased">
       <Navbar activeSection={activeSection} onNavigate={handleNavigate} />
 
       <main id="primary-content-scroller">

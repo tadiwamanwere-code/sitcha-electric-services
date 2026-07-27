@@ -12,7 +12,7 @@ export default function Process() {
   return (
     <section
       id="process"
-      className="py-24 md:py-32 bg-[#F4F7FA] text-gray-900 relative overflow-hidden"
+      className="py-24 md:py-32 bg-white text-gray-900 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="max-w-2xl mb-16">

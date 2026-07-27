@@ -17,8 +17,8 @@ const quickLinks = [
 ];
 
 const linkCls =
-  'text-gray-400 hover:text-blue-400 transition-colors flex items-center gap-2 group';
-const iconCls = 'w-3.5 h-3.5 text-gray-500 group-hover:text-blue-400 transition-colors';
+  'text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2 group';
+const iconCls = 'w-3.5 h-3.5 text-gray-500 group-hover:text-blue-600 transition-colors';
 
 export default function Footer({onNavigate}: FooterProps) {
   const handleScrollToTop = () => window.scrollTo({top: 0, behavior: 'smooth'});
@@ -26,10 +26,10 @@ export default function Footer({onNavigate}: FooterProps) {
   return (
     <footer
       id="main-footer"
-      className="bg-blue-800 text-white border-t border-white/10 py-16 relative overflow-hidden"
+      className="bg-white text-gray-900 border-t border-gray-200 py-16 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-gray-200">
           {/* Brand */}
           <div className="md:col-span-5 space-y-6">
             <button
@@ -38,15 +38,16 @@ export default function Footer({onNavigate}: FooterProps) {
             >
               <Logo className="h-10 w-auto" />
               <div>
-                <span className="font-display font-bold tracking-wide text-base text-white block leading-tight">
+                <span className="font-display font-bold tracking-wide text-base text-gray-900 block leading-tight">
                   {BRAND.name}
                 </span>
-                <span className="text-[9px] font-mono tracking-[0.25em] text-yellow-500 block -mt-0.5">
+                {/* Blue, not amber: the kicker sits on white here. */}
+                <span className="text-[9px] font-mono tracking-[0.25em] text-blue-600 block -mt-0.5">
                   {BRAND.kicker}
                 </span>
               </div>
             </button>
-            <p className="text-xs md:text-sm font-sans text-gray-400 font-light leading-relaxed max-w-sm">
+            <p className="text-xs md:text-sm font-sans text-gray-600 font-light leading-relaxed max-w-sm">
               {BRAND.blurb}
             </p>
           </div>
@@ -61,7 +62,7 @@ export default function Footer({onNavigate}: FooterProps) {
                 <li key={link.id}>
                   <button
                     onClick={() => onNavigate(link.id)}
-                    className="text-gray-400 hover:text-blue-400 transition-colors cursor-pointer uppercase"
+                    className="text-gray-600 hover:text-blue-600 transition-colors cursor-pointer uppercase"
                   >
                     {link.label}
                   </button>
@@ -153,16 +154,16 @@ export default function Footer({onNavigate}: FooterProps) {
             <p>
               © {new Date().getFullYear()} {BRAND.legalName}. ALL RIGHTS RESERVED.
             </p>
-            <p className="mt-1 text-gray-600">{BRAND.footerLine}</p>
+            <p className="mt-1 text-gray-500">{BRAND.footerLine}</p>
           </div>
 
           <button
             onClick={handleScrollToTop}
-            className="flex items-center gap-2 px-3 py-2 border border-white/10 hover:border-blue-400 hover:text-blue-400 transition-colors group cursor-pointer"
+            className="flex items-center gap-2 px-3 py-2 border border-gray-300 hover:border-blue-600 hover:text-blue-600 transition-colors group cursor-pointer"
             aria-label="Scroll back to top"
           >
             BACK TO TOP
-            <ArrowUp className="w-3.5 h-3.5 text-gray-500 group-hover:text-blue-400 group-hover:-translate-y-0.5 transition-all" />
+            <ArrowUp className="w-3.5 h-3.5 text-gray-500 group-hover:text-blue-600 group-hover:-translate-y-0.5 transition-all" />
           </button>
         </div>
       </div>

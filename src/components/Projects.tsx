@@ -17,7 +17,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <section id="projects" className="py-24 md:py-32 bg-[#F4F7FA] text-gray-900 overflow-hidden">
+    <section id="projects" className="py-24 md:py-32 bg-white text-gray-900 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Header */}
         <div className="mb-16">
@@ -64,14 +64,14 @@ export default function Projects() {
                     </div>
                   </div>
 
-                  <div className="absolute top-4 left-4 z-10 px-3 py-1 bg-[#F4F7FA]/90 backdrop-blur-sm border border-gray-200 text-[10px] font-mono tracking-widest text-gray-800 uppercase">
+                  <div className="absolute top-4 left-4 z-10 px-3 py-1 bg-white/90 backdrop-blur-sm border border-gray-200 text-[10px] font-mono tracking-widest text-gray-800 uppercase">
                     {project.categoryLabel}
                   </div>
                 </div>
 
                 <div className="p-6 md:p-8 flex-grow flex flex-col justify-between">
                   <div>
-                    <div className="flex items-center gap-4 text-xs font-mono text-gray-400 mb-2">
+                    <div className="flex items-center gap-4 text-xs font-mono text-gray-500 mb-2">
                       <span className="flex items-center gap-1">
                         <MapPin className="w-3.5 h-3.5" />
                         {project.location}
@@ -89,7 +89,7 @@ export default function Projects() {
 
                   <div className="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
                     <span className="text-xs font-mono text-blue-600 font-medium">VIEW DETAILS</span>
-                    <span className="text-xs font-mono text-gray-400">{project.area}</span>
+                    <span className="text-xs font-mono text-gray-500">{project.area}</span>
                   </div>
                 </div>
               </motion.div>
@@ -108,7 +108,7 @@ export default function Projects() {
               transition={{duration: 0.4}}
               className="border border-dashed border-gray-300 flex flex-col items-center justify-center text-center p-8 min-h-[280px]"
             >
-              <span className="text-xs font-mono tracking-widest text-gray-400 uppercase">
+              <span className="text-xs font-mono tracking-widest text-gray-500 uppercase">
                 More projects coming soon
               </span>
               <p className="text-sm text-gray-500 font-sans font-light mt-2 max-w-xs">
@@ -174,28 +174,28 @@ export default function Projects() {
 
                       <div className="grid grid-cols-2 gap-4 border-y border-gray-100 py-6 mb-6">
                         <div className="space-y-1">
-                          <span className="text-[10px] font-mono text-gray-400 block">CLIENT</span>
+                          <span className="text-[10px] font-mono text-gray-500 block">CLIENT</span>
                           <span className="text-xs font-sans text-gray-800 font-medium flex items-center gap-1.5">
                             <User className="w-3.5 h-3.5 text-gray-500" />
                             {selectedProject.client}
                           </span>
                         </div>
                         <div className="space-y-1">
-                          <span className="text-[10px] font-mono text-gray-400 block">LOCATION</span>
+                          <span className="text-[10px] font-mono text-gray-500 block">LOCATION</span>
                           <span className="text-xs font-sans text-gray-800 font-medium flex items-center gap-1.5">
                             <MapPin className="w-3.5 h-3.5 text-gray-500" />
                             {selectedProject.location}
                           </span>
                         </div>
                         <div className="space-y-1">
-                          <span className="text-[10px] font-mono text-gray-400 block">AREA</span>
+                          <span className="text-[10px] font-mono text-gray-500 block">AREA</span>
                           <span className="text-xs font-sans text-gray-800 font-medium flex items-center gap-1.5">
                             <Layers className="w-3.5 h-3.5 text-gray-500" />
                             {selectedProject.area}
                           </span>
                         </div>
                         <div className="space-y-1">
-                          <span className="text-[10px] font-mono text-gray-400 block">
+                          <span className="text-[10px] font-mono text-gray-500 block">
                             STATUS / YEAR
                           </span>
                           <span className="text-xs font-sans text-gray-800 font-medium flex items-center gap-1.5">
