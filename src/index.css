@@ -1,0 +1,54 @@
+/* Only the weights actually used. Inter 300 is required — body copy is font-light. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+/*
+ * THE BRAND LIVES HERE.
+ *
+ * Overriding Tailwind's own blue-* / yellow-* scale names means every utility
+ * already in the codebase (bg-blue-600, text-yellow-500, ...) picks up the new
+ * palette automatically. This block plus src/data.ts is a full rebrand.
+ *
+ * Keep the ramp SHAPE:
+ *   400 bright-on-dark · 500 mid · 600 deep workhorse · 700 panel (600 + ~8% L)
+ *   800 footer · 900 near-black
+ * The accent must be WARM and pass 4.5:1 against #101820 text.
+ * See references/design-system.md § 1.
+ */
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Poppins", ui-sans-serif, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Structural ramp — Sitcha navy */
+  --color-blue-400: #4c8de0; /* bright accent on dark: active nav, icons, links */
+  --color-blue-500: #2358b0; /* mid: borders, small icons */
+  --color-blue-600: #0e2a5e; /* DEEP NAVY: nav, dark sections, primary fills */
+  --color-blue-700: #16367c; /* PANEL NAVY: cards/panels on dark sections */
+  --color-blue-800: #0a1e45; /* footer */
+  --color-blue-900: #060f26; /* deepest */
+
+  /* Warm accent ramp — Sitcha amber. CTAs and eyebrow rules only. Ration it. */
+  --color-yellow-400: #f9c368; /* hover */
+  --color-yellow-500: #f5a833; /* PRIMARY ACCENT */
+  --color-yellow-600: #e08e1e; /* pressed */
+}
+
+/* Small, brand-coloured scrollbar that hovers to the accent. */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #060f26;
+}
+::-webkit-scrollbar-thumb {
+  background: #16367c;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f5a833;
+}
+
+html {
+  scroll-behavior: smooth;
+}

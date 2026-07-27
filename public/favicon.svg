@@ -1,0 +1,16 @@
+<!--
+  Favicon = the logo mark on a SOLID rounded-square brand tile. Unlike the nav
+  logo it needs its own backdrop to stay visible on any browser theme, and this
+  is the one place a rounded corner is correct.
+
+  Same "SA" monogram as src/components/Logo.tsx, scaled up inside the tile so it
+  still reads at 16px. Tile colour matches the blue-600 token in src/index.css
+  and the theme-color in index.html.
+-->
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sitcha Electric Services">
+  <rect width="120" height="120" rx="20" fill="#0e2a5e"/>
+  <g transform="translate(6,6) scale(0.9)">
+    <path d="M42 102 L72 34 L102 102" stroke="#ffffff" stroke-width="18" stroke-linejoin="miter" stroke-miterlimit="4" fill="none"/>
+    <path d="M62 10 L28 58 L47 58 L38 102 L76 52 L55 52 Z" fill="#f5a833"/>
+  </g>
+</svg>
