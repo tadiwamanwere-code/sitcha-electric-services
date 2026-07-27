@@ -1,5 +1,13 @@
 import {GoogleGenAI} from '@google/genai';
-import {SYSTEM_INSTRUCTION, fallbackReply} from './_prompt';
+/*
+ * NOTE the explicit `.js` extension. Vercel compiles this file to an ESM
+ * `api/chat.js` serverless function, and Node's ESM resolver requires a real
+ * file extension — an extensionless `./_prompt` import builds fine but throws
+ * ERR_MODULE_NOT_FOUND at runtime in production. TypeScript ("bundler"
+ * resolution) and esbuild both map `./_prompt.js` back to `_prompt.ts`, so
+ * local dev and the bundled Node server are unaffected.
+ */
+import {SYSTEM_INSTRUCTION, fallbackReply} from './_prompt.js';
 
 /**
  * POST /api/chat  →  { text: string }
