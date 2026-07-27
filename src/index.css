@@ -34,15 +34,16 @@
   --color-yellow-600: #e08e1e; /* pressed */
 }
 
-/* Small, brand-coloured scrollbar that hovers to the accent. */
+/* Small, light scrollbar that hovers to the accent. Track stays near-white so it
+   does not read as a dark stripe down the side of an all-white page. */
 ::-webkit-scrollbar {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #060f26;
+  background: #f1f5f9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #16367c;
+  background: #cbd5e1;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
